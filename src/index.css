@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Amazon Ember', Arial, sans-serif;
+  background-color: #EAEDED;
+  color: #0F1111;
+  min-height: 100vh;
+}
+
+@layer components {
+  .btn-amazon {
+    @apply bg-amazon-orange hover:bg-amazon-orange-dark text-gray-900 font-medium py-1.5 px-4 rounded-lg border border-amber-500 transition-all duration-200 text-sm cursor-pointer;
+  }
+
+  .btn-ai {
+    @apply bg-gradient-to-r from-blue-600 to-ai-blue text-white font-medium py-1.5 px-4 rounded-lg transition-all duration-200 text-sm cursor-pointer hover:opacity-90;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200;
+  }
+
+  .ai-badge {
+    @apply inline-flex items-center gap-1 bg-blue-50 text-blue-700 text-xs font-semibold px-2 py-0.5 rounded-full border border-blue-200;
+  }
+
+  .ai-panel {
+    @apply bg-gradient-to-br from-slate-900 to-blue-950 text-white rounded-2xl;
+  }
+
+  .section-title {
+    @apply text-sm font-bold text-gray-500 uppercase tracking-wider mb-2;
+  }
+}
+
+/* Waveform bars */
+.wave-bar {
+  display: inline-block;
+  width: 4px;
+  border-radius: 2px;
+  background: currentColor;
+  animation: wave 1.2s ease-in-out infinite;
+}
+.wave-bar:nth-child(1) { animation-delay: 0s; height: 12px; }
+.wave-bar:nth-child(2) { animation-delay: 0.15s; height: 20px; }
+.wave-bar:nth-child(3) { animation-delay: 0.30s; height: 28px; }
+.wave-bar:nth-child(4) { animation-delay: 0.45s; height: 20px; }
+.wave-bar:nth-child(5) { animation-delay: 0.60s; height: 14px; }
+.wave-bar:nth-child(6) { animation-delay: 0.75s; height: 22px; }
+.wave-bar:nth-child(7) { animation-delay: 0.90s; height: 16px; }
+
+@keyframes wave {
+  0%, 100% { transform: scaleY(0.5); }
+  50% { transform: scaleY(1.5); }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #c5c5c5;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Shimmer effect */
+.shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
