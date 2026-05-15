@@ -1,6 +1,31 @@
-import { useState, useRef, useEffect } from 'react';
-import { Search, ShoppingCart, User, MapPin, ChevronDown, Mic, Sparkles, TrendingUp, X } from 'lucide-react';
+import { useState, useRef } from 'react';
+import { Search, ShoppingCart, MapPin, ChevronDown, Mic, Sparkles, TrendingUp } from 'lucide-react';
 import { suggestedSearches, trendingSearches } from '../data/products';
+
+function AmazonLogo() {
+  return (
+    <div className="flex flex-col items-start cursor-pointer hover:ring-1 hover:ring-white rounded px-1 py-0.5 flex-shrink-0">
+      {/* "amazon" wordmark */}
+      <span
+        className="text-white leading-none tracking-tight"
+        style={{ fontSize: '22px', fontFamily: 'Arial Black, sans-serif', fontWeight: 900, letterSpacing: '-0.5px' }}
+      >
+        amazon
+      </span>
+      {/* Orange arrow swoosh */}
+      <svg viewBox="0 0 120 16" width="72" height="10" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M6 8 Q60 18 114 6"
+          fill="none"
+          stroke="#FF9900"
+          strokeWidth="3.5"
+          strokeLinecap="round"
+        />
+        <polygon points="108,2 116,6 108,10" fill="#FF9900" />
+      </svg>
+    </div>
+  );
+}
 
 export default function Header({ cartCount, onVoiceOpen, searchQuery, setSearchQuery }) {
   const [focused, setFocused] = useState(false);
@@ -16,11 +41,7 @@ export default function Header({ cartCount, onVoiceOpen, searchQuery, setSearchQ
       {/* Main nav bar */}
       <div className="bg-amazon-navy px-4 py-2 flex items-center gap-3">
         {/* Logo */}
-        <div className="flex items-center gap-1 text-white font-bold text-xl cursor-pointer hover:ring-1 hover:ring-white rounded px-1 py-0.5 flex-shrink-0">
-          <span className="text-amazon-orange">shop</span>
-          <span>AI</span>
-          <Sparkles size={14} className="text-ai-blue" />
-        </div>
+        <AmazonLogo />
 
         {/* Delivery location */}
         <div className="hidden md:flex items-center text-white hover:ring-1 hover:ring-white rounded px-1 py-0.5 cursor-pointer flex-shrink-0">
