@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShopWise AI — Privacy Policy</title>
+  <meta name="description" content="Privacy policy for the ShopWise AI Chrome extension." />
+  <style>
+    :root { --navy:#131921; --orange:#FF9900; --ai:#00BFFF; --ink:#0f1622; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+      color: #1a2230; background: #f4f6f9; line-height: 1.65;
+    }
+    .hero {
+      background: linear-gradient(135deg, var(--navy), #1c2942);
+      color: #fff; padding: 40px 24px;
+    }
+    .wrap { max-width: 760px; margin: 0 auto; }
+    .brand { display: flex; align-items: center; gap: 10px; font-size: 22px; font-weight: 800; }
+    .brand .ai { color: var(--ai); }
+    .brand svg { display: block; }
+    .hero h1 { font-size: 28px; margin-top: 14px; }
+    .hero p { color: #b9c4d4; margin-top: 6px; font-size: 14px; }
+    main { max-width: 760px; margin: -24px auto 60px; background: #fff; border-radius: 14px;
+           box-shadow: 0 8px 30px rgba(0,0,0,.08); padding: 32px 28px; }
+    h2 { font-size: 18px; margin: 26px 0 10px; color: var(--ink); }
+    h2:first-child { margin-top: 0; }
+    p, li { font-size: 15px; color: #36404f; }
+    ul { margin: 8px 0 8px 22px; }
+    li { margin: 6px 0; }
+    strong { color: #1a2230; }
+    .pill { display: inline-block; background: rgba(16,185,129,.12); color: #0a8a5f;
+            font-size: 13px; font-weight: 700; padding: 4px 12px; border-radius: 20px; margin-bottom: 8px; }
+    code { background: #eef1f5; padding: 1px 6px; border-radius: 4px; font-size: 13px; }
+    footer { text-align: center; color: #8a97a8; font-size: 13px; padding: 0 24px 40px; }
+    a { color: var(--ai); }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="brand">
+        <svg viewBox="0 0 120 16" width="70" height="11"><path d="M6 8 Q60 18 114 6" fill="none" stroke="#FF9900" stroke-width="3.5" stroke-linecap="round"/><polygon points="108,2 116,6 108,10" fill="#FF9900"/></svg>
+        ShopWise<span class="ai">AI</span>
+      </div>
+      <h1>Privacy Policy</h1>
+      <p>Last updated: 2026</p>
+    </div>
+  </header>
+
+  <main>
+    <span class="pill">Privacy-first · no tracking · no accounts</span>
+
+    <h2>Summary</h2>
+    <p>ShopWise AI is built to be private. In its default (Free) mode, <strong>none of your data
+    ever leaves your browser</strong>. There are no accounts, no analytics, and no servers of our own.</p>
+
+    <h2>What the extension does with data</h2>
+    <ul>
+      <li><strong>On Amazon pages</strong>, ShopWise AI adds an on-page panel. When you open that
+      panel, it reads the current product's title, price, rating, and visible reviews
+      <strong>from the page you are already viewing</strong> in order to analyze them. This happens
+      only on Amazon domains and only for the product page you are on. In Free mode the analysis runs
+      locally on your device and is <strong>not transmitted anywhere</strong>.</li>
+      <li><strong>Pasted text</strong> in the toolbar popup is analyzed locally on your device.</li>
+      <li><strong>Pinned products</strong> (for the Compare feature) and <strong>history</strong> are
+      stored only in your browser's local storage and never transmitted. Removing the extension clears them.</li>
+    </ul>
+
+    <h2>Optional "Pro" mode (off by default)</h2>
+    <p>If you explicitly enable Pro mode and configure a backend URL in Settings, the product text is
+    sent <strong>only</strong> to the backend URL <em>you</em> configure, to generate a deeper AI
+    analysis. It is not sent to any other party, and we do not operate that backend for you.</p>
+
+    <h2>What we collect</h2>
+    <p><strong>Nothing is sent to us.</strong> ShopWise AI has no analytics or tracking and does not
+    transmit your data to the developer or any third party in Free mode.</p>
+
+    <h2>Permissions</h2>
+    <ul>
+      <li><code>storage</code> — saves your settings, pinned products, and history on your own device.</li>
+      <li>Host access to Amazon domains — so the on-page panel can appear and read the product you're
+      viewing. The extension runs only on Amazon domains and on no other website.</li>
+      <li><code>activeTab</code> + <code>scripting</code> — used by the toolbar popup's manual
+      "grab from tab" action.</li>
+    </ul>
+    <p>ShopWise AI does not alter Amazon's content, place orders, or read pages on non-Amazon sites.</p>
+
+    <h2>Data sharing &amp; sale</h2>
+    <p>We do not sell or transfer your data to third parties. We do not use your data for any purpose
+    unrelated to the extension's single purpose, and never for creditworthiness or lending.</p>
+
+    <h2>Affiliation</h2>
+    <p>ShopWise AI is an independent tool and is not affiliated with, endorsed by, or sponsored by
+    Amazon. "Amazon" is a trademark of Amazon.com, Inc.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about this policy? Contact the developer at the email listed on the Chrome Web Store
+    listing.</p>
+  </main>
+
+  <footer>© 2026 ShopWise AI · This page is the official privacy policy for the ShopWise AI browser extension.</footer>
+</body>
+</html>
